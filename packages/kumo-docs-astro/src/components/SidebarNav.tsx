@@ -8,6 +8,7 @@ import {
 import { KumoMenuIcon } from "./KumoMenuIcon";
 import { SearchDialog } from "./SearchDialog";
 import { ThemeToggle } from "./ThemeToggle";
+import { StyleToggle } from "./StyleToggle";
 
 interface NavItem {
   label: string;
@@ -345,7 +346,10 @@ export function SidebarNav({ currentPath }: SidebarNavProps) {
           <KumoMenuIcon />
         </Button>
         <h1 className="text-base font-medium">Kumo</h1>
-        <ThemeToggle />
+        <div className="flex items-center gap-1">
+          <StyleToggle />
+          <ThemeToggle />
+        </div>
       </div>
 
       {/* Mobile slide-out drawer */}

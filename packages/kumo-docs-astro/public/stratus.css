@@ -1,0 +1,424 @@
+/**
+ * Stratus Global Styles
+ * 
+ * These styles replicate the global CSS from @cloudflare/style-const
+ * used in the Stratus dashboard. Enable via the StyleToggle to test
+ * how Kumo components render when subject to legacy dashboard styling.
+ * 
+ * Color values from @cloudflare/style-const v6.1.1
+ * Dark mode uses [data-mode="dark"] to match Kumo's mechanism
+ */
+
+/* CSS Variables */
+:root {
+  --cf-white: #fff;
+  --cf-black: #000;
+  --cf-gray-0: #0a0a0a;
+  --cf-gray-1: #313131;
+  --cf-gray-2: #3d3d3d;
+  --cf-gray-3: #4a4a4a;
+  --cf-gray-4: #595959;
+  --cf-gray-5: #797979;
+  --cf-gray-6: #999999;
+  --cf-gray-7: #b6b6b6;
+  --cf-gray-8: #d9d9d9;
+  --cf-gray-9: #f2f2f2;
+  --cf-blue-0: #001c43;
+  --cf-blue-1: #002b67;
+  --cf-blue-2: #003681;
+  --cf-blue-3: #0045a6;
+  --cf-blue-4: #0051c3;
+  --cf-blue-5: #086fff;
+  --cf-blue-6: #4693ff;
+  --cf-blue-7: #82b6ff;
+  --cf-blue-8: #b9d6ff;
+  --cf-blue-9: #ecf4ff;
+  --cf-orange-0: #361a02;
+  --cf-orange-1: #482303;
+  --cf-orange-2: #592b04;
+  --cf-orange-3: #763905;
+  --cf-orange-4: #8d4406;
+  --cf-orange-5: #c05d08;
+  --cf-orange-6: #ee730a;
+  --cf-orange-7: #f8a054;
+  --cf-orange-8: #fbcda5;
+  --cf-orange-9: #fef1e6;
+  --cf-red-0: #3c0501;
+  --cf-red-1: #5a0801;
+  --cf-red-2: #780a02;
+  --cf-red-3: #970d02;
+  --cf-red-4: #b20f03;
+  --cf-red-5: #e81403;
+  --cf-red-6: #fc574a;
+  --cf-red-7: #fe9f97;
+  --cf-red-8: #feccc8;
+  --cf-red-9: #ffefee;
+}
+
+[data-mode="dark"] {
+  --cf-white: #000;
+  --cf-black: #fff;
+  --cf-gray-0: #f2f2f2;
+  --cf-gray-1: #d9d9d9;
+  --cf-gray-2: #b6b6b6;
+  --cf-gray-3: #999999;
+  --cf-gray-4: #797979;
+  --cf-gray-5: #595959;
+  --cf-gray-6: #4a4a4a;
+  --cf-gray-7: #3d3d3d;
+  --cf-gray-8: #313131;
+  --cf-gray-9: #0a0a0a;
+  --cf-blue-0: #ecf4ff;
+  --cf-blue-1: #b9d6ff;
+  --cf-blue-2: #82b6ff;
+  --cf-blue-3: #4693ff;
+  --cf-blue-4: #086fff;
+  --cf-blue-5: #0051c3;
+  --cf-blue-6: #0045a6;
+  --cf-blue-7: #003681;
+  --cf-blue-8: #002b67;
+  --cf-blue-9: #001c43;
+  --cf-orange-0: #fef1e6;
+  --cf-orange-1: #fbcda5;
+  --cf-orange-2: #f8a054;
+  --cf-orange-3: #ee730a;
+  --cf-orange-4: #c05d08;
+  --cf-orange-5: #8d4406;
+  --cf-orange-6: #763905;
+  --cf-orange-7: #592b04;
+  --cf-orange-8: #482303;
+  --cf-orange-9: #361a02;
+  --cf-red-0: #ffefee;
+  --cf-red-1: #feccc8;
+  --cf-red-2: #fe9f97;
+  --cf-red-3: #fc574a;
+  --cf-red-4: #e81403;
+  --cf-red-5: #b20f03;
+  --cf-red-6: #970d02;
+  --cf-red-7: #780a02;
+  --cf-red-8: #5a0801;
+  --cf-red-9: #3c0501;
+}
+
+/* Box sizing */
+* {
+  box-sizing: border-box;
+}
+
+/* Placeholder color */
+::placeholder {
+  color: #797979;
+}
+[data-mode="dark"] ::placeholder {
+  color: #595959;
+}
+
+/* Base font sizes */
+wf-html,
+html,
+body,
+button {
+  font-size: 16px;
+}
+
+/* Font smoothing */
+wf-html,
+html {
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-size-adjust: none;
+}
+
+/* Body styles */
+wf-body,
+body {
+  line-height: 1.5;
+  color: #313131;
+  background-color: #fff;
+}
+[data-mode="dark"] :is(wf-body, body) {
+  color: #d9d9d9;
+  background-color: #0a0a0a;
+}
+
+/* SVG text fill */
+text {
+  fill: #313131;
+}
+[data-mode="dark"] text {
+  fill: #d9d9d9;
+}
+
+/* Reset margins and padding */
+wf-html,
+wf-body,
+body,
+html,
+ul,
+ol,
+li,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+}
+
+/* Heading line heights */
+h1,
+h2,
+h3,
+small {
+  line-height: 1.25;
+}
+
+/* Heading sizes */
+h1 {
+  font-size: 32px;
+  font-weight: 400;
+}
+
+h2 {
+  font-size: 24px;
+}
+
+h3 {
+  font-size: 20px;
+}
+
+h4,
+h5,
+h6 {
+  font-size: 16px;
+}
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 600;
+}
+
+/* Heading + paragraph spacing */
+h3 + p,
+h4 + p,
+h5 + p,
+h6 + p {
+  margin-top: 0.5em;
+}
+
+/* Small text */
+small {
+  font-size: 12px;
+}
+
+/* Button reset */
+button {
+  border: none;
+}
+
+/* Label styles */
+label {
+  display: block;
+  font-size: 0.875rem;
+  margin-bottom: 0.35938em;
+  min-height: 1.22em;
+}
+
+/* Fieldset reset */
+fieldset {
+  border: none;
+}
+
+/* Pre styles */
+pre {
+  border-radius: 0.5rem;
+  color: #313131;
+  display: block;
+  font-size: 14px;
+  margin: 2rem 0;
+  overflow: auto;
+  padding: 0.5rem 0.75rem;
+  width: 100%;
+}
+[data-mode="dark"] pre {
+  color: #d9d9d9;
+}
+
+/* Code and pre backgrounds */
+code,
+pre {
+  background-color: #f2f2f2;
+  border: 1px solid #d9d9d9;
+}
+[data-mode="dark"] :is(code, pre) {
+  background-color: #313131;
+  border: 1px solid #3d3d3d;
+}
+
+/* Section margins */
+section {
+  margin-bottom: 2.5rem;
+  margin-top: 2.5rem;
+}
+
+/* Table header */
+thead {
+  background-color: #f2f2f2;
+}
+[data-mode="dark"] thead {
+  background-color: #313131;
+}
+
+/* Table header font weight */
+th {
+  font-weight: 600;
+}
+
+/* Link styles - Light mode */
+a {
+  color: #0051c3;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  transition: color 150ms ease;
+}
+
+a:hover {
+  color: #003681;
+  cursor: pointer;
+}
+
+a:active {
+  color: #003681;
+  outline: none;
+}
+
+a:focus {
+  color: #086fff;
+}
+
+/* Link styles - Dark mode */
+[data-mode="dark"] a {
+  color: #4693ff;
+}
+
+[data-mode="dark"] a:hover {
+  color: #f8a054;
+}
+
+[data-mode="dark"] a:active {
+  color: #f8a054;
+}
+
+[data-mode="dark"] a:focus {
+  color: #086fff;
+}
+
+/* Link SVG fill */
+a svg,
+a:active svg,
+a:hover svg {
+  fill: currentColor;
+}
+
+/* List styles */
+ol,
+ul,
+dl {
+  list-style-position: outside;
+  margin-left: 3em;
+}
+
+ul {
+  list-style-type: disc;
+}
+
+dd {
+  margin: 0;
+}
+
+dt {
+  font-weight: 600;
+  font-size: 16px;
+}
+
+/* Content spacing */
+p + p,
+p + ul,
+p + ol,
+p + dl,
+ul + p,
+ul + h2,
+ul + h3,
+ul + h4,
+ul + h5,
+ul + h6 {
+  margin-top: 1.5em;
+}
+
+/* Horizontal rule */
+hr {
+  border: 0;
+  border-top: 1px solid #d5d7d8;
+  display: block;
+  height: 0;
+  margin: 2rem 0;
+  width: 100%;
+}
+
+/* Responsive images */
+img,
+object {
+  height: auto;
+  max-width: 100%;
+}
+
+/* Table border spacing */
+table {
+  border-spacing: 0;
+}
+
+/* Legend padding */
+legend {
+  padding-inline-start: 0;
+}
+
+/* Fieldset margin */
+fieldset {
+  margin-inline-start: 0;
+}
+
+/* Autofill styles */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus {
+  background-color: #fff;
+  color: #d9d9d9;
+}
+[data-mode="dark"] input:-webkit-autofill,
+[data-mode="dark"] input:-webkit-autofill:hover,
+[data-mode="dark"] input:-webkit-autofill:focus {
+  background-color: #0a0a0a;
+  color: #313131;
+}
+
+/* React Virtualized */
+.ReactVirtualized__List {
+  outline: none;
+}
+
+/* Grim scroll sortable helper */
+.grim-scroll-sortable-helper {
+  pointer-events: auto !important;
+  z-index: 2000 !important;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2) !important;
+  background-color: white !important;
+}
+
+.grim-scroll-sortable-helper * {
+  cursor: grabbing !important;
+}
